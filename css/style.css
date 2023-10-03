@@ -13,20 +13,45 @@ body {
   background: linear-gradient(180deg,
   var(--color-gradient-violet), var(--color-gradient-blue)) no-repeat;
   min-height: 100vh;
-
   font-family: 'Kumbh Sans', Arial, sans-serif;
   margin:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images{
+  width: 100%;
+  position: relative;
+  height: 7rem;
+  
+}
+
+.dona{
+  position: absolute;
+  transform: scale(0.7);
+  top: -150%;
+}
+
+.sombra{
+  position:absolute;
+  top: -20%;
+  left: 10%
+}
+
+details > summary {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .faq {
-  width:100%;
-  max-width: 700px;
+  width:350px;
 
   background: white;
   border-radius: 20px;
   padding:20px;
-  /* margin:20px; */
-
   display: flex;
   flex-direction: column;
   gap:20px
@@ -38,7 +63,11 @@ body {
 
 .questions[open] summary {
   font-weight: 700; /*Solo abierto*/
-  color:var(--color-corp-azul)
+  color:var(--color-corp-azul);
+}
+
+.questions[open] > summary > img {
+  transform: rotate(180deg);
 }
 
 .questions[open] p {
